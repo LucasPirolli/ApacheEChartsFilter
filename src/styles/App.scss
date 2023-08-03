@@ -1,0 +1,44 @@
+@import "variables";
+
+.container-main {
+  display: flex;
+  width: 100%;
+  @media (max-width: $largeMobile) {
+    flex-direction: column;
+  }
+  > .chart-container {
+    width: 85%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $largeMobile) {
+      width: 100%;
+    }
+    .ui {
+      &.bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        @media (max-width: $largeMobile) {
+          width: 100%;
+          grid-template-columns: 1fr;
+          flex-direction: column;
+        }
+        > #exponential-container,
+        #heatmap-container,
+        #dynamic-container,
+        #boxplot-container,
+        #bar-container {
+          width: 100% !important;
+          height: 600px !important;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          padding: 5px 0;
+          @media (max-width: $largeMobile) {
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+  }
+}

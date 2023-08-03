@@ -1,0 +1,49 @@
+@import "variables";
+
+.lateral {
+  min-height: 100vh;
+  width: 15%;
+  background-color: #e4e6eb;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  @media (max-width: $largeMobile) {
+    width: 100%;
+  }
+
+  > ul {
+    margin: 0;
+    list-style: none;
+    padding: 5%;
+    > h3 {
+      font-size: 1.375rem;
+      margin: 0;
+    }
+    > li {
+      > .accordion {
+        > .title {
+          font-size: 1rem !important;
+        }
+        > .content {
+          padding-left: 10px !important;
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+          &.active {
+            display: flex;
+            flex-direction: column;
+          }
+          > .chakra-slider {
+            width: 70%;
+          }
+          > .ui {
+            &.checkbox {
+              padding-bottom: 5px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
